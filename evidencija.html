@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidencija | RFID Evidencija</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <input type="checkbox" id="nav-gumb" style="display:none;">
+    
+    <div class="sidebar">
+        <div id="sidebar-zaglavlje">
+            <div id="sidebar-ikona"><i class="fa fa-fw fa-id-badge"></i></div>
+            <div id="sidebar-tekst">
+                <h4>RFID evidencija</h4>
+                <p>Radno vrijeme</p>
+            </div>
+        </div>
+        <a href="index.html"><i class="fa fa-fw fa-house"></i> Nadzorna ploča</a>
+        <a href="evidencija.html"><i class="fa fa-fw fa-clock"></i> Evidencija</a>
+        <a href="zaposlenici.html"><i class="fa fa-fw fa-users"></i> Zaposlenici</a>
+        <a href="kartice.html"><i class="fa fa-fw fa-address-card"></i> Kartice</a>
+    </div>
+
+    <header id="gornja-traka">
+        <label for="nav-gumb" class="otvori">☰</label>
+        <span id="naslov">Evidencija</span>
+    </header>
+
+    <main class="glavni-sadrzaj">
+        <div class="sekcija">
+            <h3>Danas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Zaposlenik</th>
+                        <th>Dolazak</th>
+                        <th>Odlazak</th>
+                        <th>Ukupno</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+							<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#1</td>
+							<td>07:45</td>
+							<td>16:02</td>
+							<td>8h 17min</td>
+							<td><span class="status prisutan">Prisutan</span></td>
+						</tr>
+						<tr>
+							<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#2</td>
+							<td>08:02</td>
+							<td>-</td>
+							<td>-</td>
+							<td><span class="status prisutan">Prisutan</span></td>
+						</tr>
+						<tr>
+							<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#3</td>
+							<td>07:30</td>
+							<td>16:10</td>
+							<td>8h 40min</td>
+							<td><span class="status prisutan">Prisutan</span></td>
+						</tr>
+						<tr>
+							<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#4</td>
+							<td>12:15</td>
+							<td>-</td>
+							<td>-</td>
+							<td><span class="status kasni">Kasni</span></td>
+						</tr>
+						<tr>
+							<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#5</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td><span class="status odsutan">Odsutan</span></td>
+						</tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sekcija">
+            <h3>Prošli tjedan</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dan</th>
+                        <th>Datum</th>
+                        <th>Dolazak</th>
+                        <th>Odlazak</th>
+                        <th>Ukupno</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ponedjeljak</td>
+                        <td>24.08.</td>
+                        <td>07:55</td>
+                        <td>16:05</td>
+                        <td>8h 10m</td>
+                        <td><span class="status prisutan">Prisutan</span></td>
+                    </tr>
+                </tbody>
+				<tr>
+				<td>Utorak</td>
+				<td>25.08.</td>
+				<td>08:12</td>
+				<td>16:00</td>
+				<td>7h 48m</td>
+				<td><span class="status kasni">Kasnio</span></td>
+			  </tr>
+			  <tr>
+				<td>Srijeda</td>
+				<td>26.08.</td>
+				<td>07:50</td>
+				<td>16:00</td>
+				<td>8h 10m</td>
+				<td><span class="status prisutan">Prisutan</span></td>
+			  </tr>
+			  <tr>
+				<td>Četvrtak</td>
+				<td>27.08.</td>
+				<td>08:00</td>
+				<td>16:00</td>
+				<td>8h 00m</td>
+				<td><span class="status prisutan">Prisutan</span></td>
+			  </tr>
+			  <tr>
+				<td>Petak</td>
+				<td>28.08.</td>
+				<td>-</td>
+				<td>-</td>
+				<td>0h 00m</td>
+				<td><span class="godisnji">Godišnji</span></td>
+			  </tr>
+			</tbody>
+			<tfoot>
+			  <tr>
+				<td colspan="4"><strong>Ukupno odrađeno u tjednu:</strong></td>
+				<td colspan="2"><strong>32h 28m / 40h</strong></td>
+			  </tr>
+			</tfoot>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>

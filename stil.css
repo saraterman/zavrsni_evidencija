@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+.sekcija {
+    overflow-x: auto; /* Omogućuje skrolanje ustranu ako tablica ne stane */
+}
+
+@media (max-width: 768px) {
+    .glavni-sadrzaj {
+        padding: 10px;
+    }
+    .sekcija {
+        padding: 12px;
+    }
+    /* Lagano smanjivanje razmaka radi bolje preglednosti */
+    th, td {
+        padding: 8px 6px;
+        font-size: 13px;
+        white-space: nowrap; /* Spriječava ružno prelamanje teksta u više redova */
+    }
+}
+
+/* Lijevi izbornik (Sidebar) */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+#sidebar-zaglavlje {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #333;
+}
+
+#sidebar-ikona {
+    font-size: 40px;
+    color: #818181;
+    margin-right: 15px;
+}
+
+#sidebar-tekst {
+    color: #818181;
+}
+
+#sidebar-tekst h4,
+#sidebar-tekst p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Gornja traka */
+#gornja-traka {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 90;
+    transition: margin-left 0.3s ease;
+}
+
+#naslov {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin-left: 15px;
+}
+
+.otvori {
+    cursor: pointer;
+    font-size: 24px;
+    color: #111;
+}
+
+/* Glavni kontejner i logika za pomicanje (Sidebar Toggle) */
+.glavni-sadrzaj {
+    margin-top: 80px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+#nav-gumb:checked ~ .sidebar {
+    width: 250px;
+}
+
+#nav-gumb:checked ~ #gornja-traka,
+#nav-gumb:checked ~ .glavni-sadrzaj {
+    margin-left: 250px;
+}
+
+/* Kartice sa statistikom */
+.mreza-kartica {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.stat-kartica {
+    flex: 1;
+    min-width: 200px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-kartica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stat-kartica .ikona {
+    font-size: 60px;
+    margin-right: 15px;
+    color: #4b5563;
+}
+
+.stat-kartica h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.stat-kartica .broj {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+.stat-kartica .broj.zeleno { 
+	color: #15803d; 
+}
+.stat-kartica .broj.plavo { 
+	color: #0369a1; 
+}
+.stat-kartica .broj.crveno { 
+	color: #b91c1c; 
+}
+
+/* Tablice i sekcije */
+.sekcija {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+}
+
+.sekcija h3, .sekcija h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.mreza-tablica {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mreza-tablica .sekcija {
+    flex: 1;
+    min-width: 300px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f9fafb;
+    font-weight: 600;
+}
+tfoot {
+  background-color: #f1f1f1;
+  text-align: right;
+}
+/* Statusi */
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.prisutan, .status.aktivna {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.status.kasni {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.status.odsutan, .status.blokirana {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.status.slobodna {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+/* Tražilica */
+.trazilica-okvir {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 4px 8px;
+    margin-bottom: 20px;
+}
+
+.trazilica-okvir input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+}
+
+.gumb-trazi, .gumb-primarni, .gumb-akcija {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.gumb-akcija {
+    padding: 4px 8px;
+    background-color: #e5e7eb;
+    color: #111;
+}
+
+.gumb-akcija:hover {
+    background-color: #d1d5db;
+}
+
+.crveno-hover:hover {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+.traka-akcija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.traka-akcija .trazilica-okvir {
+    margin-bottom: 0;
+    flex: 1;
+    max-width: 400px;
+}

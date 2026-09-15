@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaposlenici | RFID Evidencija</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <input type="checkbox" id="nav-gumb" style="display:none;">
+    
+    <div class="sidebar">
+        <div id="sidebar-zaglavlje">
+            <div id="sidebar-ikona"><i class="fa fa-fw fa-id-badge"></i></div>
+            <div id="sidebar-tekst">
+                <h4>RFID evidencija</h4>
+                <p>Radno vrijeme</p>
+            </div>
+        </div>
+        <a href="index.html"><i class="fa fa-fw fa-house"></i> Nadzorna ploča</a>
+        <a href="evidencija.html"><i class="fa fa-fw fa-clock"></i> Evidencija</a>
+        <a href="zaposlenici.html"><i class="fa fa-fw fa-users"></i> Zaposlenici</a>
+        <a href="kartice.html"><i class="fa fa-fw fa-address-card"></i> Kartice</a>
+    </div>
+
+    <header id="gornja-traka">
+        <label for="nav-gumb" class="otvori">☰</label>
+        <span id="naslov">Zaposlenici</span>
+    </header>
+
+    <main class="glavni-sadrzaj">
+
+        <div class="sekcija">
+		
+			<div class="traka-akcija">
+				<form action="/trazi" method="get" class="trazilica-okvir">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<input type="search" name="q" placeholder="Traži po imenu..." autocomplete="off">
+					<button type="submit" class="gumb-trazi">Traži</button>
+				</form>
+
+				<button class="gumb-primarni">
+					<i class="fa fa-plus"></i> Dodaj novog zaposlenika
+				</button>
+			</div>
+		
+            <h3>Popis zaposlenika</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Zaposlenik</th>
+                        <th>Odjel / Uloga</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#1</a></td>
+						<td>Dizajn / Glavni dizajner interijera</td>
+						<td>zaposlenik1@interijeri.hr</td>
+					</tr>
+					<tr class="red-visual">
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#2</td>
+						<td>Visual / 3D Vizualizator</td>
+						<td>zaposlenik2@interijeri.hr</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#3</td>
+						<td>Teren / Voditelj projekata</td>
+						<td>zaposlenik3@interijeri.hr</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#4</td>
+						<td>Proizvodnja / Tehničar za izradu namještaja</td>
+						<td>zaposlenik4@interijeri.hr</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#5</td>
+						<td>Showroom / Savjetnica za prodaju</td>
+						<td>zaposlenik5@interijeri.hr</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#6</td>
+						<td>Dizajn / Arhitektica interijera</td>
+						<td>zaposlenik6@interijeri.hr</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#7</td>
+						<td>Teren / Voditelj montaže</td>
+						<td>zaposlenik7@interijeri.hr</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#8</td>
+						<td>Showroom / Dizajnerica rasvjete</td>
+						<td>zaposlenik8@interijeri.hr</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#9</td>
+						<td>Proizvodnja / Operator CNC stroja</td>
+						<td>zaposlenik9@interijeri.hr</td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#10</td>
+						<td>Nabava / Specijalista za materijale i tekstil</td>
+						<td>zaposlenik10@interijeri.hr</td>
+					</tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>

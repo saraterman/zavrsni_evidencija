@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartice | RFID Evidencija</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <input type="checkbox" id="nav-gumb" style="display:none;">
+    
+    <div class="sidebar">
+        <div id="sidebar-zaglavlje">
+            <div id="sidebar-ikona"><i class="fa fa-fw fa-id-badge"></i></div>
+            <div id="sidebar-tekst">
+                <h4>RFID evidencija</h4>
+                <p>Radno vrijeme</p>
+            </div>
+        </div>
+        <a href="index.html"><i class="fa fa-fw fa-house"></i> Nadzorna ploča</a>
+        <a href="evidencija.html"><i class="fa fa-fw fa-clock"></i> Evidencija</a>
+        <a href="zaposlenici.html"><i class="fa fa-fw fa-users"></i> Zaposlenici</a>
+        <a href="kartice.html"><i class="fa fa-fw fa-address-card"></i> Kartice</a>
+    </div>
+
+    <header id="gornja-traka">
+        <label for="nav-gumb" class="otvori">☰</label>
+        <span id="naslov">Kartice</span>
+    </header>
+
+    <main class="glavni-sadrzaj">
+        <div class="mreza-kartica">
+            <div class="stat-kartica">
+                <div>
+                    <h3>Ukupno kartica</h3>
+                    <p class="broj">19</p>
+                </div>
+            </div>
+            <div class="stat-kartica">
+                <div>
+                    <h3>Aktivne</h3>
+                    <p class="broj zeleno">10</p>
+                </div>
+            </div>
+            <div class="stat-kartica">
+                <div>
+                    <h3>Slobodne</h3>
+                    <p class="broj plavo">4</p>
+                </div>
+            </div>
+            <div class="stat-kartica">
+                <div>
+                    <h3>Blokirane</h3>
+                    <p class="broj crveno">5</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sekcija">
+            <div style="margin-bottom: 15px;">
+                <button class="gumb-primarni"><i class="fa fa-plus"></i> Dodaj novu RFID karticu</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>UID Kod</th>
+                        <th>Vlasnik</th>
+                        <th>Datum</th>
+                        <th>Status</th>
+                        <th>Akcije</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>HEX: 4A-8F-12-99</code></td>
+                        <td><i class="fa fa-fw fa-circle-user"></i>Zaposlenik #1</td>
+                        <td>15.01.2025.</td>
+                        <td><span class="status aktivna">Aktivna</span></td>
+                        <td>
+                            <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                            <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+                        </td>
+                    </tr>
+					<tr>
+            <td><code>HEX: 8B-1C-44-02</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#2</td>
+            <td>01.03.2025.</td>
+            <td><span class="status aktivna">Aktivna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: 7B-2E-90-A4</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#3</td>
+            <td>07.03.2025.</td>
+            <td><span class="status aktivna">Aktivna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: D4-11-F8-3C</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#4</td>
+            <td>10.03.2025.</td>
+            <td><span class="status aktivna">Aktivna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: 05-E9-6A-B2</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#5</td>
+            <td>03.04.2025.</td>
+            <td><span class="status aktivna">Aktivna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: 8C-3F-D1-55</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#6</td>
+            <td>18.04.2025.</td>
+            <td><span class="status aktivna">Aktivna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: F2-8A-04-E7</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#7</td>
+            <td>30.04.2025.</td>
+            <td><span class="status aktivna">Aktivna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: 19-6C-B8-43</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#8</td>
+            <td>12.05.2025.</td>
+            <td><span class="status aktivna">Aktivna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: A1-5E-27-D9</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#9</td>
+            <td>23.05.2025.</td>
+            <td><span class="status aktivna">Aktivna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: 33-C0-FA-81</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#10</td>
+            <td>7.06.2025.</td>
+            <td><span class="status aktivna">Aktivna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Uredi"><i class="fa fa-pen"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Blokiraj"><i class="fa fa-ban"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: 1F-99-88-AB</code></td>
+            <td><em>Nije dodijeljeno</em></td>
+            <td>-</td>
+            <td><span class="status slobodna">Slobodna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Dodijeli zaposleniku"><i class="fa fa-user-plus"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: E6-44-1D-B0</code></td>
+            <td><em>Nije dodijeljeno</em></td>
+            <td>-</td>
+            <td><span class="status slobodna">Slobodna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Dodijeli zaposleniku"><i class="fa fa-user-plus"></i></button>
+            </td>
+        </tr><tr>
+            <td><code>HEX: 92-7B-E3-14</code></td>
+            <td><em>Nije dodijeljeno</em></td>
+            <td>-</td>
+            <td><span class="status slobodna">Slobodna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Dodijeli zaposleniku"><i class="fa fa-user-plus"></i></button>
+            </td>
+        </tr><tr>
+            <td><code>HEX: B5-92-3E-11</code></td>
+            <td><em>Nije dodijeljeno</em></td>
+            <td>-</td>
+            <td><span class="status slobodna">Slobodna</span></td>
+            <td>
+                <button class="gumb-akcija" title="Dodijeli zaposleniku"><i class="fa fa-user-plus"></i></button>
+            </td>
+        </tr>
+        <tr>
+            <td><code>HEX: D3-77-10-54</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#3</td>
+            <td>10.10.2024.</td>
+            <td><span class="status blokirana">Blokirana (Izgubljena)</span></td>
+            <td>
+                <button class="gumb-akcija" title="Odblokiraj"><i class="fa fa-rotate-left"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Obriši"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: 6C-F4-8D-07</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#6</td>
+            <td>19.11.2024.</td>
+            <td><span class="status blokirana">Blokirana (Izgubljena)</span></td>
+            <td>
+                <button class="gumb-akcija" title="Odblokiraj"><i class="fa fa-rotate-left"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Obriši"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: 2A-18-C9-F5</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#9</td>
+            <td>15.12.2024.</td>
+            <td><span class="status blokirana">Blokirana (Izgubljena)</span></td>
+            <td>
+                <button class="gumb-akcija" title="Odblokiraj"><i class="fa fa-rotate-left"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Obriši"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: E0-73-4A-32</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#10</td>
+            <td>20.12.2024.</td>
+            <td><span class="status blokirana">Blokirana (Izgubljena)</span></td>
+            <td>
+                <button class="gumb-akcija" title="Odblokiraj"><i class="fa fa-rotate-left"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Obriši"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+		<tr>
+            <td><code>HEX: 4F-8A-D6-9B</code></td>
+            <td><i class="fa fa-fw fa-circle-user"></i> Zaposlenik#1</td>
+            <td>05.01.2024.</td>
+            <td><span class="status blokirana">Blokirana (Izgubljena)</span></td>
+            <td>
+                <button class="gumb-akcija" title="Odblokiraj"><i class="fa fa-rotate-left"></i></button>
+                <button class="gumb-akcija crveno-hover" title="Obriši"><i class="fa fa-trash"></i></button>
+            </td>
+        </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>
